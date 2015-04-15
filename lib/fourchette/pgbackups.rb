@@ -7,8 +7,8 @@ class Fourchette::Pgbackups
   end
 
   def copy(from, to)
-    ensure_pgbackups_is_present(from)
-    ensure_pgbackups_is_present(to)
+    # ensure_pgbackups_is_present(from)
+    # ensure_pgbackups_is_present(to)
 
     from_url, from_name = pg_details_for(from)
     to_url, to_name = pg_details_for(to)
