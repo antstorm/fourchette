@@ -38,6 +38,7 @@ class Fourchette::Tarball
 
   def tarball_to_url(filepath, github_repo)
     logger.info 'Tarball to URL as a service in progress...'
+    logger.info system("ls -la tmp/")
     cleaned_path = filepath.gsub('tmp/', '').gsub('.tar.gz', '')
     "#{ENV['FOURCHETTE_APP_URL']}/#{github_repo}/#{cleaned_path}"
   end
