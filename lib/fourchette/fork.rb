@@ -19,7 +19,7 @@ class Fourchette::Fork
     build_info = @heroku.client.build.info(fork_name, build['id'])
     # Let's just leave some time to Heroku to download the tarball and start
     # the process. This is some random timing that seems to make sense at first.
-    sleep 30
+    sleep 60
     if build_info['status'] == 'failed'
       @github.comment_pr(
         pr_number, 'The build failed on Heroku. See the activity tab on Heroku.'
